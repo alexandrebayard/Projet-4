@@ -238,7 +238,11 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        height: 63px;
+        align-items: center;
+        
     }
+    
      & img {
         position: relative;
         right: 95px;
@@ -246,7 +250,7 @@ footer {
 
 }
 
-.body {
+.container {
 
     & {
         width: 100%;
