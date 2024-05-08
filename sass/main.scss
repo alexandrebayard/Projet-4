@@ -1,7 +1,5 @@
-/* valeur  stockée */
-
-
 /* géneral */
+
 body {
    margin: 0;
 }
@@ -28,19 +26,16 @@ h1 {
 .heart-full {
     opacity: 0;
     color: #9356DC ;
-
-    
 }
 
 .heart-full:hover {
-
     opacity: 1;
     color: #9356DC ;
     transition-duration:1s;
- }
-
+}
 
 /* haut de la page */
+
 header {
 
     & .title {
@@ -60,6 +55,7 @@ header {
 }
 
 /* ceci est le bloc section sous le header */
+
 .text-infos {
     
     & div {
@@ -164,36 +160,31 @@ header {
         right: 45px;
     }
     
-    article img {
+    & img {
         width: 100%;
         height: 180px;
         object-fit: cover;
         border-radius: 10px 10px 0px 0px;
     }
    
-    article .card-content {
+    & .card-content {
         padding-left: 10px;
         line-height: 4px;
         padding-bottom: 10px;
-        
     }
 
-    & .card-content i{
-       
+    &  i {
         position: absolute;
         right: 50px;
-        
-        
     }
     
     & h3 {
         font-family: roboto;
         font-weight: 700;
         font-size: 18px;
-        
     }
 
-   & p {
+    & p {
         font-size: 17px;
         font-weight: 300;
     }
@@ -229,7 +220,7 @@ footer {
         margin-right: 10px;
     }
 
-    h2 {
+    & h2 {
         color: #ffffff;
         font-family: Shrikhand;
         font-size: 18px;
@@ -243,123 +234,131 @@ footer {
 
 .header {
    
-   & { 
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-}
+    & { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+     & img {
+        position: relative;
+        right: 95px;
+     }
 
 }
 
 .body {
 
- & {
-    width: 100%;
-    height: 100%;
-   
- } 
+    & {
+        width: 100%;
+        height: 100%;
+    } 
 
-& .container-menu {
-    display: flex;
-    flex-direction: column;
-    background-color:#F6F6F6;
-    border-radius: 50px 50px 0px 0px ;
-    position: absolute;
-    top: 280px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
+    & .container-menu {
+        display: flex;
+        flex-direction: column;
+        background-color:#F6F6F6;
+        border-radius: 50px 50px 0px 0px ;
+        position: absolute;
+        top: 280px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 20px;
+    }
 
-& .img-plat {
-    
-    width: 100%;
-    height: 240px;
-    object-fit:cover;
-}
+    & .img-plat {
+        width: 100%;
+        height: 220px;
+        object-fit:cover;
+    }
 
-& i {
-    margin-left: 50px;
-    line-height: 0;
-}
+    & i {
+        position: absolute;
+        top: 45px;
+        right: 70px;
+        line-height: 0;
+    }
 
-& h2 {
-    
-    font-family: Shrikhand;
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 400;
-    text-align: left;
-    line-height: 0;
-    margin-top: 45px;
-}
-& h3 {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 18.75px;
-    text-align: left;
-    border-bottom: 3px solid #99E2D0 ;
-    width: 9%;
-    margin-top: 50px;
-    margin-bottom: 0;
-    
- }
+    & h2 {
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 400;
+        text-align: left;
+        line-height: 0;
+        margin-top: 45px;
+    }
 
-& h4 {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: left;
-    margin-top: 15px;
-}
+    & h3 {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18.75px;
+        text-align: left;
+        border-bottom: 3px solid #99E2D0 ;
+        width: 9%;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
 
-& p {
-    font-family: Roboto;
-    font-size: 15.04px;
-    font-weight: 300;
-    text-align: left;
-    margin-bottom: 15px;
+    & h4 {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        margin-top: 15px;
+    }
 
-}
+    & p {
+        font-family: Roboto;
+        font-size: 15.04px;
+        font-weight: 300;
+        text-align: left;
+        margin-bottom: 15px;
+    }
 
-& button {
-    width: 99%;
-    background-color:#FFFFFF;
-    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-    border-radius: 15px;
-    border: transparent;
-    height: 60px;
-    line-height: 0;
-    padding-left: 15px;
-    margin-top: 10px;
-}
+    & .prix-menu {
+        display: flex;
+        justify-content: right;
+        position: relative;
+        top: -20px;
+        margin: 15px;
+        font-family: Roboto;
+        font-size: 15.04px;
+        font-weight: 700;
+    }
 
-& .menu-button {
-    display: flex;
-    justify-content: center;
-}
+    & button {
+        width: 99%;
+        background-color:#FFFFFF;
+        box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+        border-radius: 15px;
+        border: transparent;
+        height: 60px;
+        line-height: 0;
+        padding-left: 15px;
+        padding-bottom: 0;
+        padding-top: 5px;
+        margin-top: 10px;
+    }
 
-& .button-menu {
-    
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    box-shadow: 0px 4px 10px 0px #00000040;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    color: #F6F6F6;
-    text-align: center;
-    width: 45%;
-    height: 50px;
-    border-radius: 25px;
-    margin-top: 45px;
-   
+    & .menu-button {
+        display: flex;
+        justify-content: center;
+    }
 
-
-
-}
+    & .button-menu {
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        box-shadow: 0px 4px 10px 0px #00000040;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        color: #F6F6F6;
+        text-align: center;
+        width: 45%;
+        height: 50px;
+        border-radius: 25px;
+        margin-top: 45px;
+    }
 
 
 }
@@ -372,15 +371,15 @@ footer {
 
 
 .categories {
-    
-    & { display: flex;
-    flex-direction: row;
+        
+    .categories { 
+        display: flex;
+        flex-direction: row;
     }
 
-    & button {
-    width: 35%;
+    button {
+        width: 35%;
 }
-
 
 }
 
