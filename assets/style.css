@@ -25,12 +25,13 @@ h1 {
 
 .heart-full {
   opacity: 0;
-  color: #9356DC;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  color: transparent;
 }
 
 .heart-full:hover {
   opacity: 1;
-  color: #9356DC;
   transition-duration: 1s;
 }
 
@@ -41,7 +42,7 @@ header .title {
   flex-direction: row;
   justify-content: center;
   gap: 17px;
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   margin-bottom: 4px;
 }
 header p {
@@ -57,9 +58,9 @@ header p {
   padding-top: 20px;
 }
 .text-infos button {
-  padding: 20px;
   border-radius: 50px;
   width: 60%;
+  height: 50px;
   color: white;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: 0;
@@ -67,7 +68,6 @@ header p {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
-  line-height: 18.75px;
   text-align: center;
 }
 .text-infos p {
@@ -80,12 +80,13 @@ header p {
   padding-bottom: 30px;
   padding-top: 25px;
 }
-.categories div {
-  padding-left: 30px;
-  padding-right: 30px;
+.categories .button-categories {
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+  gap: 15px;
 }
 .categories button {
   padding: 20px;
@@ -98,6 +99,9 @@ header p {
 }
 .categories img {
   margin-right: 20px;
+}
+.categories h2 {
+  padding-left: 20px;
 }
 
 /* ceci est la section articles */
@@ -199,31 +203,29 @@ footer h2 {
   right: 95px;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-}
 .container .container-menu {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
   border-radius: 50px 50px 0px 0px;
-  position: absolute;
-  top: 280px;
-  padding-left: 25px;
-  padding-right: 25px;
+  position: relative;
+  top: -45px;
   padding-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0;
 }
 .container .img-plat {
   width: 100%;
-  height: 220px;
+  height: 260px;
   object-fit: cover;
 }
 .container i {
   position: absolute;
   top: 45px;
-  right: 70px;
+  right: 50px;
   line-height: 0;
+  font-size: 24px;
 }
 .container h2 {
   font-family: Shrikhand;
@@ -269,17 +271,13 @@ footer h2 {
   font-size: 15.04px;
   font-weight: 700;
 }
-.container button {
-  width: 99%;
+.container article {
   background-color: #FFFFFF;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
-  border: transparent;
-  height: 60px;
+  height: 50px;
   line-height: 0;
-  padding-left: 15px;
-  padding-bottom: 0;
-  padding-top: 5px;
+  padding: 10px;
   margin-top: 10px;
 }
 .container .menu-button {
@@ -289,6 +287,7 @@ footer h2 {
 .container .button-menu {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border: transparent;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -300,17 +299,73 @@ footer h2 {
   margin-top: 45px;
 }
 
-/* mediaquery */
-@media screen and (min-width: 1200px) {
-  .categories .categories {
+/* mediaqueries */
+@media all and (min-width: 1280px) {
+  .container .header img {
+    right: 650px;
+  }
+  .container .img-plat {
+    height: 400px;
+  }
+  .container .container-menu {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .container .container-menu i {
+    position: absolute;
+    right: 380px;
+  }
+  .container .container-menu h2 {
+    text-align: center;
+  }
+  .container .container-menu .button-menu {
+    width: 200px;
+  }
+  .categories {
+    padding: 50px 180px 50px 180px;
+  }
+  .categories .button-categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  .categories button {
+    width: 40%;
+  }
+  .text-infos button {
+    width: 20%;
+  }
+  .text-infos br {
+    display: none;
+  }
+  .card {
+    padding: 50px 195px 50px 195px;
+  }
+  .card-menu {
     display: flex;
     flex-direction: row;
   }
-  .categories button {
-    width: 35%;
+  .card-menu article {
+    width: 40%;
   }
-  .text-infos button {
-    width: 30%;
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+  footer .list-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer .element-footer {
+    margin-right: 25px;
+  }
+  footer h2 {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 }
 
