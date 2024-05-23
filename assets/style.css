@@ -1,20 +1,81 @@
 @charset "UTF-8";
+/* animations */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loaderTimer {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  60% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+.menu-entrees {
+  animation: fadein 3s;
+}
+
+.menu-plats {
+  animation: fadein 3s;
+}
+
+.menu-desserts {
+  animation: fadein 3s;
+}
+
+/* loader */
+#loader {
+  animation: 3s loaderTimer cubic-bezier(0, 0, 1, -0.45);
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #F6F6F6;
+  opacity: 80%;
+}
+
+.rubik-loader {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(http://i.giphy.com/3og0ISeflb7vrNzy2A.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* géneral */
 body {
   margin: 0;
 }
-
-p {
+body p {
   font-family: roboto;
 }
-
-h2 {
+body h2 {
   font-family: roboto;
   font-size: 24px;
   font-weight: 700;
 }
-
-h1 {
+body h1 {
   font-family: Shrikhand;
   font-size: 30px;
   font-weight: 400;
@@ -22,17 +83,19 @@ h1 {
   color: #101010;
   text-align: center;
 }
-
-.heart-full {
+body .heart-full {
   opacity: 0;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   background-clip: text;
   color: transparent;
 }
-
-.heart-full:hover {
+body .heart-full:hover {
   opacity: 1;
-  transition-duration: 1s;
+  transition-duration: 2s;
+}
+body a {
+  text-decoration: none;
+  color: black;
 }
 
 /* haut de la page */
@@ -51,16 +114,19 @@ header p {
 }
 
 /* ceci est le bloc section sous le header */
+.text-infos {
+  line-height: 30px;
+}
 .text-infos div {
   text-align: center;
   background-color: #F6F6F6;
   padding-bottom: 30px;
   padding-top: 20px;
 }
-.text-infos button {
+.text-infos a {
   border-radius: 50px;
   width: 60%;
-  height: 50px;
+  padding: 15px;
   color: white;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: 0;
@@ -69,6 +135,10 @@ header p {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
+}
+.text-infos a:hover {
+  filter: brightness(1.1);
+  box-shadow: 4px 8px 15px 4px rgba(0, 0, 0, 0.2509803922);
 }
 .text-infos p {
   font-size: 18px;
@@ -96,9 +166,16 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
 }
-.categories img {
-  margin-right: 20px;
+.categories button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.categories button .full:hover {
+  color: #9356DC;
 }
 .categories h2 {
   padding-left: 20px;
@@ -112,17 +189,21 @@ header p {
 .card .card-menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
 }
-.card article {
+.card .card-menu a {
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+}
+.card .card-menu a article {
   border-radius: 10px 10px 10px 10px;
   background-color: white;
   width: 100%;
+  height: 100%;
+  margin-bottom: 0;
 }
 .card .info-txt {
-  width: 20%;
+  width: 15%;
   padding: 8px;
   background-color: #99E2D0;
   color: #008766;
@@ -130,7 +211,19 @@ header p {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
-  line-height: 16.41px;
+  text-align: center;
+  position: absolute;
+  right: 45px;
+}
+.card .txt-info {
+  width: 15%;
+  padding: 8px;
+  background-color: #99E2D0;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
   text-align: center;
   position: absolute;
   right: 45px;
@@ -146,9 +239,10 @@ header p {
   line-height: 4px;
   padding-bottom: 10px;
 }
-.card i {
+.card .card-content i {
   position: absolute;
-  right: 50px;
+  right: 40px;
+  font-size: 24px;
 }
 .card h3 {
   font-family: roboto;
@@ -193,16 +287,17 @@ footer h2 {
 /* pages des restaurants */
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   height: 63px;
   align-items: center;
-}
-.header img {
-  position: relative;
-  right: 95px;
+  padding-left: 25px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
+.container {
+  background-color: #F6F6F6;
+}
 .container .container-menu {
   display: flex;
   flex-direction: column;
@@ -210,31 +305,36 @@ footer h2 {
   border-radius: 50px 50px 0px 0px;
   position: relative;
   top: -45px;
-  padding-bottom: 20px;
   padding-right: 15px;
   padding-left: 15px;
-  margin: 0;
+  padding-bottom: 30px;
+}
+.container .container-menu div {
+  line-height: 0;
 }
 .container .img-plat {
   width: 100%;
   height: 260px;
   object-fit: cover;
 }
-.container i {
-  position: absolute;
-  top: 45px;
-  right: 50px;
-  line-height: 0;
+.container .icon-heart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.container .icon-heart i {
   font-size: 24px;
+  position: absolute;
+  right: 30px;
 }
 .container h2 {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
   font-weight: 400;
-  text-align: left;
-  line-height: 0;
-  margin-top: 45px;
 }
 .container h3 {
   font-family: Roboto;
@@ -243,7 +343,7 @@ footer h2 {
   line-height: 18.75px;
   text-align: left;
   border-bottom: 3px solid #99E2D0;
-  width: 9%;
+  width: 3%;
   margin-top: 50px;
   margin-bottom: 0;
 }
@@ -252,39 +352,74 @@ footer h2 {
   font-size: 18px;
   font-weight: 500;
   text-align: left;
-  margin-top: 15px;
+  padding-left: 10px;
 }
 .container p {
   font-family: Roboto;
-  font-size: 15.04px;
+  font-size: 13px;
   font-weight: 300;
   text-align: left;
-  margin-bottom: 15px;
-}
-.container .prix-menu {
-  display: flex;
-  justify-content: right;
-  position: relative;
-  top: -20px;
-  margin: 15px;
-  font-family: Roboto;
-  font-size: 15.04px;
-  font-weight: 700;
+  padding-left: 10px;
 }
 .container article {
+  position: relative;
   background-color: #FFFFFF;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
-  height: 50px;
-  line-height: 0;
-  padding: 10px;
   margin-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+.container article:hover .icon-validation {
+  right: 0;
+}
+.container article:hover .prix-menu {
+  position: absolute;
+  right: 70px;
+}
+.container article .prix-menu {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  top: 45px;
+  right: 5px;
+  margin: 5px;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.container article .icon-validation {
+  background-color: #99E2D0;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -5rem;
+}
+.container article .icon-validation .icon {
+  background-color: white;
+  border-radius: 100px;
+  height: 1.2rem;
+  width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container article .icon-validation .fa-check {
+  color: #99E2D0;
+  font-size: 10px;
 }
 .container .menu-button {
   display: flex;
   justify-content: center;
 }
-.container .button-menu {
+.container .menu-button .button-menu {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border: transparent;
@@ -298,11 +433,18 @@ footer h2 {
   border-radius: 25px;
   margin-top: 45px;
 }
+.container .menu-button button:hover {
+  filter: brightness(1.1);
+  box-shadow: 4px 8px 15px 4px rgba(0, 0, 0, 0.2509803922);
+}
 
 /* mediaqueries */
 @media all and (min-width: 1280px) {
+  .container {
+    background-color: #FFFFFF;
+  }
   .container .header img {
-    right: 650px;
+    right: 700px;
   }
   .container .img-plat {
     height: 400px;
@@ -313,15 +455,45 @@ footer h2 {
     padding-left: 200px;
     padding-right: 200px;
   }
+  .container .container-menu .icon-heart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
   .container .container-menu i {
-    position: absolute;
-    right: 380px;
+    right: 300px;
   }
   .container .container-menu h2 {
     text-align: center;
   }
   .container .container-menu .button-menu {
     width: 200px;
+  }
+  .card {
+    padding: 50px 180px 40px 180px;
+  }
+  .card .card-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+  .card .card-menu a {
+    width: 50%;
+  }
+  .card .card-menu a .info-txt {
+    right: 120px;
+    width: 10%;
+  }
+  .card .card-menu a .txt-info {
+    width: 10%;
+    left: 500px;
+    box-sizing: border-box;
+  }
+  .card .card-menu a i {
+    right: inherit;
+    margin-inline-start: 520px;
   }
   .categories {
     padding: 50px 180px 50px 180px;
@@ -340,16 +512,6 @@ footer h2 {
   .text-infos br {
     display: none;
   }
-  .card {
-    padding: 50px 195px 50px 195px;
-  }
-  .card-menu {
-    display: flex;
-    flex-direction: row;
-  }
-  .card-menu article {
-    width: 40%;
-  }
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -366,6 +528,36 @@ footer h2 {
   footer h2 {
     margin-right: 50px;
     margin-left: 50px;
+  }
+}
+@media all and (min-width: 800px) {
+  .container .container-menu {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .container .container-menu .icon-heart {
+    justify-content: center;
+  }
+  .container .container-menu .icon-heart i {
+    position: absolute;
+    right: 250px;
+  }
+  body .categories {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  body .card {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  body .card .info-txt {
+    right: 120px;
+  }
+  body .card .txt-info {
+    right: 120px;
+  }
+  body .card .fa-heart {
+    right: 120px;
   }
 }
 
