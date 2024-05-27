@@ -379,15 +379,12 @@ footer h2 {
   overflow: hidden;
 }
 .container article .p {
-  width: 80%;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.container article:hover .p {
-  width: 50%;
-}
-.container article h4 {
+.container article .p h4 {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -396,7 +393,7 @@ footer h2 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.container article p {
+.container article .p p {
   font-family: Roboto;
   font-size: 13px;
   font-weight: 300;
@@ -404,6 +401,9 @@ footer h2 {
   padding-left: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.container article:hover .p {
+  width: 50%;
 }
 .container article:hover .icon-validation {
   right: 0;

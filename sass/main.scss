@@ -452,34 +452,35 @@ footer {
         overflow: hidden;
 
         .p {
-            width: 80%;
+            width: 100%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            h4 {
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 500;
+                text-align: left;
+                padding-left: 10px ;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        
+            p {
+                font-family: Roboto;
+                font-size: 13px;
+                font-weight: 300;
+                text-align: left;
+                padding-left: 10px ;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
         }
 
         &:hover .p {
             width: 50%;
-        }
-        
-        h4 {
-            font-family: Roboto;
-            font-size: 18px;
-            font-weight: 500;
-            text-align: left;
-            padding-left: 10px ;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    
-        p {
-            font-family: Roboto;
-            font-size: 13px;
-            font-weight: 300;
-            text-align: left;
-            padding-left: 10px ;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
 
         &:hover .icon-validation {
