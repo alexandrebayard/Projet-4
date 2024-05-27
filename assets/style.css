@@ -368,20 +368,6 @@ footer h2 {
   margin-top: 50px;
   margin-bottom: 0;
 }
-.container h4 {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
-  padding-left: 10px;
-}
-.container p {
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 300;
-  text-align: left;
-  padding-left: 10px;
-}
 .container article {
   position: relative;
   background-color: #FFFFFF;
@@ -391,6 +377,29 @@ footer h2 {
   padding-bottom: 10px;
   align-items: center;
   overflow: hidden;
+}
+.container article .p {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.container article h4 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container article p {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .container article:hover .icon-validation {
   right: 0;

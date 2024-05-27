@@ -441,22 +441,6 @@ footer {
         margin-bottom: 0;
     }
 
-    h4 {
-        font-family: Roboto;
-        font-size: 18px;
-        font-weight: 500;
-        text-align: left;
-        padding-left: 10px ;
-    }
-
-    p {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-        text-align: left;
-        padding-left: 10px ;
-    }
-
     article {
         position: relative;
         background-color:#FFFFFF;
@@ -466,6 +450,33 @@ footer {
         padding-bottom: 10px;
         align-items: center;
         overflow: hidden;
+
+        .p {
+            width: 80%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+
+        h4 {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            padding-left: 10px ;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    
+        p {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+            text-align: left;
+            padding-left: 10px ;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
         &:hover .icon-validation {
             right: 0;
