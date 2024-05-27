@@ -36,7 +36,7 @@
   right: 0;
   bottom: 0;
   background: #F6F6F6;
-  opacity: 80%;
+  opacity: 97%;
 }
 
 .rubik-loader {
@@ -384,7 +384,7 @@ footer h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.container article .p h4 {
+.container article h4 {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -393,7 +393,7 @@ footer h2 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.container article .p p {
+.container article p {
   font-family: Roboto;
   font-size: 13px;
   font-weight: 300;

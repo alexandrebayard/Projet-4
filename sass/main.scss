@@ -40,7 +40,7 @@
   right: 0;
   bottom: 0;
   background:#F6F6F6;
-  opacity: 80%;
+  opacity: 97%;
 }
 
 .rubik-loader {
@@ -456,27 +456,26 @@ footer {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-
-            h4 {
-                font-family: Roboto;
-                font-size: 18px;
-                font-weight: 500;
-                text-align: left;
-                padding-left: 10px ;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
+        }
         
-            p {
-                font-family: Roboto;
-                font-size: 13px;
-                font-weight: 300;
-                text-align: left;
-                padding-left: 10px ;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
+        h4 {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            padding-left: 10px ;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
+        p {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+            text-align: left;
+            padding-left: 10px ;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         &:hover .p {
