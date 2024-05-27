@@ -455,9 +455,13 @@ footer {
             width: 80%;
             white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-
+        &:hover .p {
+            width: 50%;
+        }
+        
         h4 {
             font-family: Roboto;
             font-size: 18px;
@@ -585,7 +589,6 @@ footer {
             padding-left: 200px;
             padding-right: 200px;
             
-        
             .icon-heart {
                 display: flex;
                 flex-direction: row;
@@ -683,6 +686,10 @@ footer {
         .container-menu {
             padding-left: 60px;
             padding-right: 60px;
+
+            .p:hover {
+                width: 100%;
+            }
 
             .icon-heart {
                 justify-content: center;

@@ -382,6 +382,10 @@ footer h2 {
   width: 80%;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container article:hover .p {
+  width: 50%;
 }
 .container article h4 {
   font-family: Roboto;
@@ -556,6 +560,9 @@ footer h2 {
   .container .container-menu {
     padding-left: 60px;
     padding-right: 60px;
+  }
+  .container .container-menu .p:hover {
+    width: 100%;
   }
   .container .container-menu .icon-heart {
     justify-content: center;
