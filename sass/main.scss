@@ -101,7 +101,7 @@ body {
 
         &:hover .heart-full {
             display: block;
-            transition-duration:5s;
+            transition-duration: 5s;
         }
 
         &:hover .heart-empty {
@@ -109,7 +109,6 @@ body {
         }
 
     }
-
 
 }
 
@@ -452,34 +451,33 @@ footer {
         overflow: hidden;
 
         .p {
-            width: 100%;
-            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: nowrap;
         }
-        
+
         h4 {
+            text-overflow: ellipsis;
             font-family: Roboto;
             font-size: 18px;
             font-weight: 500;
             text-align: left;
             padding-left: 10px ;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
 
         p {
+            text-overflow: ellipsis;
             font-family: Roboto;
             font-size: 13px;
             font-weight: 300;
             text-align: left;
             padding-left: 10px ;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
 
         &:hover .p {
             width: 50%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         &:hover .icon-validation {
@@ -632,15 +630,15 @@ footer {
 
                         .txt-info {
                             width: 20%;
-                            top: 10px;
-                            right: 10px;
+                            top: 0;
+                            right: 15px;
                         }
 
                     }
 
                 }
             }
-    }
+        }
     
         .categories {
             padding: 50px 180px 50px 180px;
