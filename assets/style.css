@@ -126,7 +126,7 @@ header p {
   width: 60%;
   padding: 15px;
   color: white;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(#FF79DA, #9356DC);
   border: 0;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   font-family: Roboto;
@@ -169,6 +169,10 @@ header p {
   font-weight: 500;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
+.categories button:hover {
+  transform: scale(1.02);
+  background-color: #F5EDFF;
+}
 .categories button i {
   margin-right: 10px;
   font-size: 20px;
@@ -202,8 +206,9 @@ header p {
   margin-bottom: 0;
 }
 .card .info-txt {
+  padding: 7px;
   width: 15%;
-  padding: 8px;
+  border-radius: 5px;
   background-color: #99E2D0;
   color: #008766;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
@@ -215,11 +220,13 @@ header p {
   right: 45px;
 }
 .card .txt-info {
+  width: 15%;
+  white-space: nowrap;
   position: absolute;
   right: 45px;
-  padding: 8px;
-  width: 15%;
+  border-radius: 5px;
   background-color: #99E2D0;
+  padding: 7px;
   color: #008766;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   font-family: Roboto;
@@ -325,13 +332,13 @@ footer h2 {
   line-height: 0;
 }
 .container .container-menu .menu-entrees {
-  animation: fadein 3s;
+  animation: fadein 2s;
 }
 .container .container-menu .menu-plats {
-  animation: fadein 3s;
+  animation: fadein 4s;
 }
 .container .container-menu .menu-desserts {
-  animation: fadein 3s;
+  animation: fadein 6s;
 }
 .container .img-plat {
   width: 100%;
@@ -379,10 +386,12 @@ footer h2 {
   overflow: hidden;
 }
 .container article .p {
+  width: 80%;
   overflow: hidden;
   white-space: nowrap;
 }
 .container article h4 {
+  width: 120%;
   text-overflow: ellipsis;
   font-family: Roboto;
   font-size: 18px;
@@ -453,7 +462,7 @@ footer h2 {
   justify-content: center;
 }
 .container .menu-button .button-menu {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border: transparent;
   font-family: Roboto;
@@ -513,8 +522,8 @@ footer h2 {
     width: 50%;
   }
   .card .card-menu a .info-txt {
-    right: 120px;
-    width: 10%;
+    right: 220px;
+    width: 5%;
   }
   .card .card-menu a .image-container {
     position: relative;
@@ -522,8 +531,8 @@ footer h2 {
     width: 100%;
   }
   .card .card-menu a .image-container .txt-info {
-    width: 20%;
-    top: 0;
+    width: 12%;
+    top: 3px;
     right: 15px;
   }
   .categories {
@@ -573,18 +582,20 @@ footer h2 {
     justify-content: center;
   }
   body .categories {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
   body .card {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
   body .card .info-txt {
-    right: 120px;
+    right: 220px;
+    width: 8%;
   }
   body .card .txt-info {
-    right: 120px;
+    right: 220px;
+    width: 8%;
   }
   body .card .fa-heart {
     right: 120px;
