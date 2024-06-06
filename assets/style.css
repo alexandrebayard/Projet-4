@@ -100,56 +100,50 @@
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
   margin-top: 10px;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
-.container article .p {
-  width: 80%;
+.container article .menu-top {
+  overflow: hidden;
+  flex: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.container article .menu-top h4 {
   overflow: hidden;
   white-space: nowrap;
-}
-.container article h4 {
-  width: 120%;
   text-overflow: ellipsis;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
-  text-align: left;
-  padding-left: 10px;
 }
-.container article p {
+.container article .menu-top p {
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  width: 85%;
+  transition: all 0.5s;
   font-family: Roboto;
   font-size: 13px;
   font-weight: 300;
-  text-align: left;
-  padding-left: 10px;
-}
-.container article:hover .p {
-  width: 50%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .container article:hover .icon-validation {
-  right: 0;
-}
-.container article:hover .prix-menu {
-  position: absolute;
-  right: 70px;
+  transform: translateX(0);
 }
 .container article .prix-menu {
-  display: flex;
-  justify-content: right;
-  position: absolute;
-  top: 45px;
-  right: 5px;
-  margin: 10px;
+  position: relative;
+  top: 26px;
+  height: 100%;
   font-family: Roboto;
   font-size: 13px;
   font-weight: 700;
-  transition: 0.5s;
+  transition: all 0.5s;
+  transform: translateX(40px);
+}
+.container article:hover .prix-menu {
+  transform: translateX(-10px);
 }
 .container article .icon-validation {
   background-color: #99E2D0;
@@ -158,10 +152,8 @@
   align-items: center;
   justify-content: center;
   transition: 0.5s;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -5rem;
+  height: 70.98px;
+  transform: translateX(4rem);
 }
 .container article .icon-validation .icon {
   background-color: white;
