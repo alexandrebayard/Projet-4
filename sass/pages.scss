@@ -1,6 +1,4 @@
 
-
-
 /* pages des restaurants */
 
 .header {
@@ -14,7 +12,6 @@
 }
 
 .container {
-
     background-color:#F6F6F6;
 
     .container-menu  {
@@ -27,10 +24,6 @@
         padding-right: 15px;
         padding-left: 15px;
         padding-bottom: 30px;
-        
-        div {
-            line-height: 0;
-        }
 
         .menu-entrees {
             animation: fadein 2s;
@@ -88,89 +81,83 @@
     }
 
     article {
-        position: relative;
-        background-color:#FFFFFF;
-        box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-        border-radius: 15px;
-        margin-top: 10px;
+        background-color: #fff;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: .75rem;
         overflow: hidden;
-
+        box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
+        cursor: pointer;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
         .menu-top {
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             flex: 1;
-            padding-left: 10px;
-            padding-bottom: 10px;
-
+            padding: 5px 0;
+            overflow: hidden;
+    
             h4 {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                font-family: Roboto;
+                font-family: 'Roboto', sans-serif;
                 font-size: 18px;
-                font-weight: 500;
-            }
-
-            p {
-                overflow: hidden;
-                white-space: nowrap;
+                font-weight: 550;
+                padding-bottom: 3px;
                 text-overflow: ellipsis;
-                width: 85%;
-                transition:all 0.5s;
-                font-family: Roboto;
-                font-size: 13px;
-                font-weight: 300;
+                white-space: nowrap;
+                overflow: hidden;
+                margin: 0;
+                margin-bottom: .3rem;
             }
     
+            p {
+                font-family: 'Roboto', sans-serif;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin: 0;
+            }
         }
-
-        &:hover .icon-validation {
-            transform: translateX(0);
-        }
-
+    
         .prix-menu {
-            position: relative;
-            top: 26px;
-            height: 100%;
-            font-family: Roboto;
-            font-size: 13px;
-            font-weight: 700;
-            transition: all .5s;
-            transform: translateX(40px);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
         }
-
-        &:hover .prix-menu {
-            transform: translateX(-10px);
-        }
-
+    
         .icon-validation {
             background-color: #99E2D0;
+            margin: -1rem -5rem -1rem 1rem;
             width: 4rem;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: .5s;
-            height: 70.98px;
-            transform: translateX(4rem);
-           
+    
             .icon {
-                background-color: white;
-                border-radius: 100px;
-                height: 1.2rem;
-                width: 1.2rem;
+                height: 1.6rem;
+                width: 1.3rem;
+                background-color: #fff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                border-radius: 100px;
             }
-
+    
             .fa-check {
                 color: #99E2D0;
-                font-size: 10px;
             }
         }
-    }  
+
+        &:hover .icon-validation {
+            margin-right: -1rem;
+        }
+    }
 
     .menu-button {
         display: flex;

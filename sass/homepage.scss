@@ -99,69 +99,57 @@ header {
         padding-right: 20px;
         display: flex;
         flex-direction: column;
-        margin-bottom: 15px;
         gap: 15px;
+        justify-content: space-between;
 
-        .numerotations1 {
-            padding: 5px;
-            border-radius: 50%;
-            background-color: #9356DC;
-            color: white;
-            width: 5%;
-            text-align: center;
-            position: absolute;
-            left: 5px;
-        }
-        .numerotations2 {
-            padding: 5px;
-            border-radius: 50%;
-            background-color: #9356DC;
-            color: white;
-            width: 5%;
-            text-align: center;
-            position: absolute;
-            left: 5px;
-        }
-        .numerotations3 {
-            padding: 5px;
-            border-radius: 50%;
-            background-color: #9356DC;
-            color: white;
-            width: 5%;
-            text-align: center;
-            position: absolute;
-            left: 5px;
-        }
     }
 
-    button:hover {
-            background-color: #F5EDFF;
+    .mars:hover {
+        background-color: #F5EDFF;
     }
 
-    button {
-            padding: 20px;
+    .mars {
+            padding: 15px;
             border-radius: 20px;
             background-color: #F6F6F6;
             border: 0;
             display: flex;
-            justify-content: center;
+            flex: 1; 
             align-items: center;
+            justify-content: center;
             font-family: Roboto;
             font-size: 16px;
             font-weight: 500;
             box-shadow: 0px 4px 15px 0px #00000026;
-
-        i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .full:hover {
-            color: #9356DC;
-        }
-
     }
 
+
+            p {
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #9356DC;
+                color: white;
+                font-weight: bold;
+                flex-shrink: 0;
+                position:sticky;
+                right: 1000px;
+                margin-left: -30px; 
+            }
+
+            i {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+
+            .full:hover {
+                color: #9356DC;
+            }
+    
     h2 {
         padding-left: 20px;
     }
@@ -309,50 +297,4 @@ footer {
         font-style: italic;
     }
     
-}
-
-@media all and (min-width: 800px) {
-    body {
-      main{
-        .categories{
-            .button-categories{
-                .numerotations1{
-                    left: 210px;
-                    width: 2%;
-                }
-                .numerotations2{
-                    left: 210px;
-                    width: 2%;
-                }
-                .numerotations3{
-                    left: 210px;
-                    width: 2%;
-                }
-            }
-        }
-      }  
-    }
-}
-@media all and (min-width: 1280px) {
-    body {
-      main{
-        .categories{
-            .button-categories{
-                .numerotations1{
-                    left: 210px;
-                    width: 2%;
-                }
-                .numerotations2{
-                    position: relative;
-                    left: 0;
-                    margin-left: 0;
-                }
-                .numerotations3{
-                    left: 210px;
-                    width: 2%;
-                }
-        }
-      }  
-    }
-}
 }

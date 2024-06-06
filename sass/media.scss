@@ -1,6 +1,6 @@
 /* mediaqueries */
 
-@media all and (min-width: 1280px)  {
+@media all and (min-width: 1250px)  {
 
     .container {
         background-color: #FFFFFF;
@@ -81,14 +81,14 @@
             padding: 50px 180px 50px 180px;
 
                 .button-categories {
-                    display: flex;
                     flex-direction: row;
-                    justify-content: start;
+
+                    p {
+                        position: initial;
+                        
+                    }
                 }
 
-                button {
-                    width: 40%;
-                }
         }
 
         .text-infos {
