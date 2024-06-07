@@ -104,11 +104,11 @@ header {
 
     }
 
-    .mars:hover {
+    .button-filtre:hover {
         background-color: #F5EDFF;
     }
 
-    .mars {
+    .button-filtre {
             padding: 15px;
             border-radius: 20px;
             background-color: #F6F6F6;
@@ -123,32 +123,31 @@ header {
             box-shadow: 0px 4px 15px 0px #00000026;
     }
 
+    p {
+        margin-left: 0;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #9356DC;
+        color: white;
+        font-weight: bold;
+        position:sticky;
+        right: 1000px;
+        margin-left: -30px; 
+    }
 
-            p {
-                margin-right: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background: #9356DC;
-                color: white;
-                font-weight: bold;
-                flex-shrink: 0;
-                position:sticky;
-                right: 1000px;
-                margin-left: -30px; 
-            }
+    i {
+        margin-right: 10px;
+        font-size: 20px;
+    }
 
-            i {
-                margin-right: 10px;
-                font-size: 20px;
-            }
-
-            .full:hover {
-                color: #9356DC;
-            }
+    .full:hover {
+        color: #9356DC;
+    }
     
     h2 {
         padding-left: 20px;

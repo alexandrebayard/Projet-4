@@ -83,13 +83,13 @@
                 .button-categories {
                     flex-direction: row;
 
-                    p {
-                        position: initial;
-                        
-                    }
-                }
 
-        }
+                    .button-filtre {
+                        display: inline;
+                    }
+
+                }    
+            }
 
         .text-infos {
                 button {
