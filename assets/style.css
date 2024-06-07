@@ -252,7 +252,21 @@
     flex-direction: row;
   }
   body .categories .button-categories .button-filtre {
-    display: inline;
+    display: inline-block;
+    padding-top: 25px;
+  }
+  body .categories .button-categories .span {
+    display: flex;
+    justify-content: center;
+  }
+  body .categories .button-categories .span i {
+    position: relative;
+    top: -40px;
+    margin-right: 15px;
+  }
+  body .categories .button-categories .span span {
+    position: relative;
+    top: -40px;
   }
   body .text-infos button {
     width: 20%;

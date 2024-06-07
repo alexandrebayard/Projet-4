@@ -85,7 +85,25 @@
 
 
                     .button-filtre {
-                        display: inline;
+                        display: inline-block;
+                        padding-top: 25px;
+
+                    }
+
+                    .span {
+                        display: flex;
+                        justify-content: center;
+
+                        i {
+                            position: relative;
+                            top: -40px;
+                            margin-right: 15px;
+                        }
+
+                        span {
+                            position: relative;
+                            top: -40px;
+                        }
                     }
 
                 }    
